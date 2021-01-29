@@ -115,6 +115,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named task_2
+
+# Build rule for target.
+task_2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) task_2
+.PHONY : task_2
+
+# fast build rule for target.
+task_2\fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_2.dir\build
+.PHONY : task_2\fast
+
+#=============================================================================
 # Target rules for targets named CLion_HW14
 
 # Build rule for target.
@@ -167,6 +180,33 @@ HW14_6_task_1.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_1.dir\HW14_6_task_1.cpp.s
 .PHONY : HW14_6_task_1.cpp.s
 
+HW14_6_task_2.obj: HW14_6_task_2.cpp.obj
+
+.PHONY : HW14_6_task_2.obj
+
+# target to build an object file
+HW14_6_task_2.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_2.dir\HW14_6_task_2.cpp.obj
+.PHONY : HW14_6_task_2.cpp.obj
+
+HW14_6_task_2.i: HW14_6_task_2.cpp.i
+
+.PHONY : HW14_6_task_2.i
+
+# target to preprocess a source file
+HW14_6_task_2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_2.dir\HW14_6_task_2.cpp.i
+.PHONY : HW14_6_task_2.cpp.i
+
+HW14_6_task_2.s: HW14_6_task_2.cpp.s
+
+.PHONY : HW14_6_task_2.s
+
+# target to generate assembly for a file
+HW14_6_task_2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_2.dir\HW14_6_task_2.cpp.s
+.PHONY : HW14_6_task_2.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -204,9 +244,13 @@ help:
 	@echo ... rebuild_cache
 	@echo ... CLion_HW14
 	@echo ... task_1
+	@echo ... task_2
 	@echo ... HW14_6_task_1.obj
 	@echo ... HW14_6_task_1.i
 	@echo ... HW14_6_task_1.s
+	@echo ... HW14_6_task_2.obj
+	@echo ... HW14_6_task_2.i
+	@echo ... HW14_6_task_2.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
