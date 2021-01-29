@@ -5,9 +5,9 @@ std::string encrypt(std::string input, int N)
 {
     for(int i = 0; i < input.length(); i++)
     {
-        int tmp = input[i] + N % 25;
-        if(tmp > 122) tmp = 96 + tmp % 122;
-        input[i] = tmp;
+        if(input[i] == ' ') continue;
+        input[i] += N % 25;
+        if(input[i] > 122) input[i] = 96 + input[i] % 122;
     }
     return input;
 }
@@ -16,9 +16,9 @@ std::string decrypt(std::string input, int N)
 {
     for(int i = 0; i < input.length(); i++)
     {
-        int tmp = input[i] - N % 25;
-        if(tmp < 97) tmp = 123 - 97 % tmp;
-        input[i] = tmp;
+        if(input[i] == ' ') continue;
+        input[i] -= N % 25;
+        if(input[i] < 97) input[i] = 123 - 97 % input[i];
     }
     return input;
 }
@@ -30,6 +30,7 @@ int main()
 
     std::cout << "input: ";
     std::getline(std::cin, str);
+    std::cout << std::endl;
 
     std::cout << "input encrypted number: ";
     std::cin >> n;
