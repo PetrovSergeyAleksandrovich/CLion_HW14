@@ -5,7 +5,7 @@ std::string encrypt(std::string input, int N)
 {
     for(int i = 0; i < input.length(); i++)
     {
-        if(input[i] == ' ') continue;
+        if( input[i] < 97 or input[i] > 122) continue;
         input[i] += N % 25;
         if(input[i] > 122) input[i] = 96 + input[i] % 122;
     }
@@ -16,7 +16,7 @@ std::string decrypt(std::string input, int N)
 {
     for(int i = 0; i < input.length(); i++)
     {
-        if(input[i] == ' ') continue;
+        if(input[i] < 97 or input[i] > 122) continue;
         input[i] -= N % 25;
         if(input[i] < 97) input[i] = 123 - 97 % input[i];
     }
