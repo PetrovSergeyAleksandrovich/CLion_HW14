@@ -153,6 +153,46 @@ task_1\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_1.dir\build
 .PHONY : task_1\fast
 
+#=============================================================================
+# Target rules for targets named task_3
+
+# Build rule for target.
+task_3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) task_3
+.PHONY : task_3
+
+# fast build rule for target.
+task_3\fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_3.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_3.dir\build
+.PHONY : task_3\fast
+
+HW14_14_6_task_3.obj: HW14_14_6_task_3.cpp.obj
+
+.PHONY : HW14_14_6_task_3.obj
+
+# target to build an object file
+HW14_14_6_task_3.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_3.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_3.dir\HW14_14_6_task_3.cpp.obj
+.PHONY : HW14_14_6_task_3.cpp.obj
+
+HW14_14_6_task_3.i: HW14_14_6_task_3.cpp.i
+
+.PHONY : HW14_14_6_task_3.i
+
+# target to preprocess a source file
+HW14_14_6_task_3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_3.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_3.dir\HW14_14_6_task_3.cpp.i
+.PHONY : HW14_14_6_task_3.cpp.i
+
+HW14_14_6_task_3.s: HW14_14_6_task_3.cpp.s
+
+.PHONY : HW14_14_6_task_3.s
+
+# target to generate assembly for a file
+HW14_14_6_task_3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_3.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_3.dir\HW14_14_6_task_3.cpp.s
+.PHONY : HW14_14_6_task_3.cpp.s
+
 HW14_6_task_1.obj: HW14_6_task_1.cpp.obj
 
 .PHONY : HW14_6_task_1.obj
@@ -245,6 +285,10 @@ help:
 	@echo ... CLion_HW14
 	@echo ... task_1
 	@echo ... task_2
+	@echo ... task_3
+	@echo ... HW14_14_6_task_3.obj
+	@echo ... HW14_14_6_task_3.i
+	@echo ... HW14_14_6_task_3.s
 	@echo ... HW14_6_task_1.obj
 	@echo ... HW14_6_task_1.i
 	@echo ... HW14_6_task_1.s
