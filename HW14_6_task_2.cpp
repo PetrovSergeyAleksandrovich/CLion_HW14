@@ -23,11 +23,11 @@ std::string input()
     return input_text;
 }
 
-std::string  check_line(std::string tmp_str)
+std::string  check_line(const std::string& tmp_str)
 {
     std::string result = "Nobody", result_player1, result_player2;
     if (tmp_str == "xxx") {
-        result_player1 = "Petya won";
+        result_player1 = "Petya won line";
         return result_player1;
     }
     if (tmp_str == "ooo"){
@@ -84,7 +84,7 @@ std::string  check_diagonal(std::string tmp_str1, std::string tmp_str2, std::str
     return result;
 }
 
-std::string result_check(std::string tmp_str1,std::string tmp_str2, std::string tmp_str3)
+std::string result_check(const std::string& tmp_str1, const std::string& tmp_str2, const std::string& tmp_str3)
 {
     std::string result = "Nobody";
     if(check_line(tmp_str1) != "Nobody") return check_line(tmp_str1);
@@ -103,5 +103,4 @@ int main()
     std::cout << std::endl << str1 << "\n" << str2 << "\n" << str3 << "\n";
     result = result_check(str1, str2, str3);
     std::cout << result;
-
 }
