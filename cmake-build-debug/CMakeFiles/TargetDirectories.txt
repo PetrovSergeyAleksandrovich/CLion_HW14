@@ -3,4 +3,5 @@ C:/Users/Poizone/CLion_HW14/cmake-build-debug/CMakeFiles/CLion_HW14.dir
 C:/Users/Poizone/CLion_HW14/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/Poizone/CLion_HW14/cmake-build-debug/CMakeFiles/task_1.dir
 C:/Users/Poizone/CLion_HW14/cmake-build-debug/CMakeFiles/task_3.dir
+C:/Users/Poizone/CLion_HW14/cmake-build-debug/CMakeFiles/task_4.dir
 C:/Users/Poizone/CLion_HW14/cmake-build-debug/CMakeFiles/rebuild_cache.dir

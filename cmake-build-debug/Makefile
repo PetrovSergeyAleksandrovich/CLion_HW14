@@ -166,32 +166,18 @@ task_3\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_3.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_3.dir\build
 .PHONY : task_3\fast
 
-HW14_14_6_task_3.obj: HW14_14_6_task_3.cpp.obj
+#=============================================================================
+# Target rules for targets named task_4
 
-.PHONY : HW14_14_6_task_3.obj
+# Build rule for target.
+task_4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) task_4
+.PHONY : task_4
 
-# target to build an object file
-HW14_14_6_task_3.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_3.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_3.dir\HW14_14_6_task_3.cpp.obj
-.PHONY : HW14_14_6_task_3.cpp.obj
-
-HW14_14_6_task_3.i: HW14_14_6_task_3.cpp.i
-
-.PHONY : HW14_14_6_task_3.i
-
-# target to preprocess a source file
-HW14_14_6_task_3.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_3.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_3.dir\HW14_14_6_task_3.cpp.i
-.PHONY : HW14_14_6_task_3.cpp.i
-
-HW14_14_6_task_3.s: HW14_14_6_task_3.cpp.s
-
-.PHONY : HW14_14_6_task_3.s
-
-# target to generate assembly for a file
-HW14_14_6_task_3.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_3.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_3.dir\HW14_14_6_task_3.cpp.s
-.PHONY : HW14_14_6_task_3.cpp.s
+# fast build rule for target.
+task_4\fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_4.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_4.dir\build
+.PHONY : task_4\fast
 
 HW14_6_task_1.obj: HW14_6_task_1.cpp.obj
 
@@ -247,6 +233,60 @@ HW14_6_task_2.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_2.dir\HW14_6_task_2.cpp.s
 .PHONY : HW14_6_task_2.cpp.s
 
+HW14_6_task_3.obj: HW14_6_task_3.cpp.obj
+
+.PHONY : HW14_6_task_3.obj
+
+# target to build an object file
+HW14_6_task_3.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_3.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_3.dir\HW14_6_task_3.cpp.obj
+.PHONY : HW14_6_task_3.cpp.obj
+
+HW14_6_task_3.i: HW14_6_task_3.cpp.i
+
+.PHONY : HW14_6_task_3.i
+
+# target to preprocess a source file
+HW14_6_task_3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_3.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_3.dir\HW14_6_task_3.cpp.i
+.PHONY : HW14_6_task_3.cpp.i
+
+HW14_6_task_3.s: HW14_6_task_3.cpp.s
+
+.PHONY : HW14_6_task_3.s
+
+# target to generate assembly for a file
+HW14_6_task_3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_3.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_3.dir\HW14_6_task_3.cpp.s
+.PHONY : HW14_6_task_3.cpp.s
+
+HW14_6_task_4.obj: HW14_6_task_4.cpp.obj
+
+.PHONY : HW14_6_task_4.obj
+
+# target to build an object file
+HW14_6_task_4.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_4.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_4.dir\HW14_6_task_4.cpp.obj
+.PHONY : HW14_6_task_4.cpp.obj
+
+HW14_6_task_4.i: HW14_6_task_4.cpp.i
+
+.PHONY : HW14_6_task_4.i
+
+# target to preprocess a source file
+HW14_6_task_4.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_4.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_4.dir\HW14_6_task_4.cpp.i
+.PHONY : HW14_6_task_4.cpp.i
+
+HW14_6_task_4.s: HW14_6_task_4.cpp.s
+
+.PHONY : HW14_6_task_4.s
+
+# target to generate assembly for a file
+HW14_6_task_4.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_4.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\task_4.dir\HW14_6_task_4.cpp.s
+.PHONY : HW14_6_task_4.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -286,15 +326,19 @@ help:
 	@echo ... task_1
 	@echo ... task_2
 	@echo ... task_3
-	@echo ... HW14_14_6_task_3.obj
-	@echo ... HW14_14_6_task_3.i
-	@echo ... HW14_14_6_task_3.s
+	@echo ... task_4
 	@echo ... HW14_6_task_1.obj
 	@echo ... HW14_6_task_1.i
 	@echo ... HW14_6_task_1.s
 	@echo ... HW14_6_task_2.obj
 	@echo ... HW14_6_task_2.i
 	@echo ... HW14_6_task_2.s
+	@echo ... HW14_6_task_3.obj
+	@echo ... HW14_6_task_3.i
+	@echo ... HW14_6_task_3.s
+	@echo ... HW14_6_task_4.obj
+	@echo ... HW14_6_task_4.i
+	@echo ... HW14_6_task_4.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
