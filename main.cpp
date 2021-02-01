@@ -3,10 +3,10 @@
 
 int main() {
 
-    std::string text = "123";
-    int x = 5;
+    std::string text = "-.123";
+    double x = 5;
 
-    std::cout << std::stoi(text) + x;
+    std::cout << std::stof(text) + x;
 
     return 0;
 }
