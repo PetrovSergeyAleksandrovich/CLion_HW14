@@ -57,7 +57,6 @@ std::string check_dots(std::string ip)
         output = "check_dots";
         return output;
     }
-
     return output;
 }
 
@@ -66,8 +65,8 @@ std::string check_zeros(std::string ip)
     std::string output = "YES";
     for(int i = 0; i < ip.length()-2; i++)
     {
-        if(ip[i] == '1' && ip[i+1] == '0' && ip[i+2] == '0') continue;
-        if(ip[i] == '2' && ip[i+1] == '0' && ip[i+2] == '0') continue;
+        if(ip[i] == '1' && ip[i+1] == '0' && ip[i+2] == '0') { i += 2; continue;}
+        if(ip[i] == '2' && ip[i+1] == '0' && ip[i+2] == '0') { i += 2; continue;}
 
         if(ip[i] == '0' && ip[i+1] == '0')
         {
@@ -113,7 +112,6 @@ std::string check_digits(std::string ip)
             }
         }
     }
-
     return output;
 }
 
