@@ -61,33 +61,33 @@ include CMakeFiles\task_3.dir\progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles\task_3.dir\flags.make
 
-CMakeFiles\task_3.dir\HW14_14_6_task_3.cpp.obj: CMakeFiles\task_3.dir\flags.make
-CMakeFiles\task_3.dir\HW14_14_6_task_3.cpp.obj: ..\HW14_14_6_task_3.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Poizone\CLion_HW14\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/task_3.dir/HW14_14_6_task_3.cpp.obj"
+CMakeFiles\task_3.dir\HW14_6_task_3.cpp.obj: CMakeFiles\task_3.dir\flags.make
+CMakeFiles\task_3.dir\HW14_6_task_3.cpp.obj: ..\HW14_6_task_3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Poizone\CLion_HW14\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/task_3.dir/HW14_6_task_3.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\task_3.dir\HW14_14_6_task_3.cpp.obj /FdCMakeFiles\task_3.dir\ /FS -c C:\Users\Poizone\CLion_HW14\HW14_14_6_task_3.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\task_3.dir\HW14_6_task_3.cpp.obj /FdCMakeFiles\task_3.dir\ /FS -c C:\Users\Poizone\CLion_HW14\HW14_6_task_3.cpp
 <<
 
-CMakeFiles\task_3.dir\HW14_14_6_task_3.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task_3.dir/HW14_14_6_task_3.cpp.i"
-	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe > CMakeFiles\task_3.dir\HW14_14_6_task_3.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Poizone\CLion_HW14\HW14_14_6_task_3.cpp
+CMakeFiles\task_3.dir\HW14_6_task_3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task_3.dir/HW14_6_task_3.cpp.i"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe > CMakeFiles\task_3.dir\HW14_6_task_3.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Poizone\CLion_HW14\HW14_6_task_3.cpp
 <<
 
-CMakeFiles\task_3.dir\HW14_14_6_task_3.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task_3.dir/HW14_14_6_task_3.cpp.s"
+CMakeFiles\task_3.dir\HW14_6_task_3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task_3.dir/HW14_6_task_3.cpp.s"
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\task_3.dir\HW14_14_6_task_3.cpp.s /c C:\Users\Poizone\CLion_HW14\HW14_14_6_task_3.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\task_3.dir\HW14_6_task_3.cpp.s /c C:\Users\Poizone\CLion_HW14\HW14_6_task_3.cpp
 <<
 
 # Object files for target task_3
 task_3_OBJECTS = \
-"CMakeFiles\task_3.dir\HW14_14_6_task_3.cpp.obj"
+"CMakeFiles\task_3.dir\HW14_6_task_3.cpp.obj"
 
 # External object files for target task_3
 task_3_EXTERNAL_OBJECTS =
 
-task_3.exe: CMakeFiles\task_3.dir\HW14_14_6_task_3.cpp.obj
+task_3.exe: CMakeFiles\task_3.dir\HW14_6_task_3.cpp.obj
 task_3.exe: CMakeFiles\task_3.dir\build.make
 task_3.exe: CMakeFiles\task_3.dir\objects1.rsp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Poizone\CLion_HW14\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable task_3.exe"

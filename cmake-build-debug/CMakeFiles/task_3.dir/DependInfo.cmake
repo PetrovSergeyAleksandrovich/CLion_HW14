@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Poizone/CLion_HW14/HW14_14_6_task_3.cpp" "C:/Users/Poizone/CLion_HW14/cmake-build-debug/CMakeFiles/task_3.dir/HW14_14_6_task_3.cpp.obj"
+  "C:/Users/Poizone/CLion_HW14/HW14_6_task_3.cpp" "C:/Users/Poizone/CLion_HW14/cmake-build-debug/CMakeFiles/task_3.dir/HW14_6_task_3.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 

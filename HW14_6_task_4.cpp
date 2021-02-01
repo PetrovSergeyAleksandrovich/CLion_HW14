@@ -4,7 +4,7 @@
 std::string input()
 {
     std::string ip;
-    std::cout << "Input email: ";
+    std::cout << "Input IP: ";
     std::cin >> ip;
     std::cout << std::endl << "Your input: " << ip << std::endl;
     return ip;
@@ -69,11 +69,18 @@ std::string check_zeros(std::string ip)
         if(ip[i] == '1' && ip[i+1] == '0' && ip[i+2] == '0') continue;
         if(ip[i] == '2' && ip[i+1] == '0' && ip[i+2] == '0') continue;
 
+        if(ip[i] == '0' && ip[i+1] == '0')
+        {
+            output = "check_zeros";
+            return output;
+        }
+
         if(ip[i] == '.' && ip[i+1] == '0' && ip[i+2] == '0')
         {
             output = "check_zeros";
             return output;
         }
+
         if( ip[i] == '.' && ip[i+1] == '0' && ip[i+2] >= '1' && ip[i+2] <= '9')
         {
             output = "check_zeros";

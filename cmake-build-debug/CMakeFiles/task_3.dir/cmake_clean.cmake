@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/task_3.dir/HW14_14_6_task_3.cpp.obj"
+  "CMakeFiles/task_3.dir/HW14_6_task_3.cpp.obj"
   "task_3.exe"
   "task_3.exe.manifest"
   "task_3.lib"
