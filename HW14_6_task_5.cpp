@@ -26,7 +26,7 @@ std::string input()
         if (minus>1 || dot>1) answer = false;
         else if (minus == 1 && n[0] != '-') answer = false;
         else if (digit == 0) answer = false;
-        
+
         //Print the answer
         if(answer) output = n;
         else{
