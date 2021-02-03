@@ -26,7 +26,7 @@ std::string input()
 std::string  check_line(std::string tmp_str1, std::string tmp_str2, std::string tmp_str3)
 {
     std::string result = "Nobody", result_player1 = "none", result_player2 ="none";
-    
+
     if (tmp_str1 == "xxx" || tmp_str2 == "xxx" || tmp_str3 == "xxx") {
         result_player1 = "Petya won line";
     }

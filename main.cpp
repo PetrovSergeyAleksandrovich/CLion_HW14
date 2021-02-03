@@ -3,10 +3,12 @@
 
 int main() {
 
-    std::string text = "-.123";
-    double x = 5;
+    std::string x = "10000000.001";
+    std::string y = "10000000.002";
 
-    std::cout << std::stof(text) + x;
+
+    std::cout << stold(x) - stold(y) ;
+
 
     return 0;
 }

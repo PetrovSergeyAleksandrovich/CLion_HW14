@@ -39,11 +39,12 @@ std::string input()
 
 int main()
 {
-    std::string n1 = input(), n2 = input();
+    std::string x = input();
+    std::string y = input();
 
-    if(stof(n1) > stof(n2)) std::cout << "More";
-    if(stof(n1) < stof(n2)) std::cout << "Less";
-    if(stof(n1) == stof(n2)) std::cout << "Equal";
+    if( stold(x) + stold(y) == 0) { std::cout << "Equal"; return 0;}
+    if( stold(x) > stold(y) )     { std::cout << "More";  return 0;}
+    if( stold(x) < stold(y) )     { std::cout << "Less";  return 0;}
 
     return 0;
 }
