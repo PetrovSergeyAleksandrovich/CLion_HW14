@@ -23,38 +23,45 @@ std::string input()
     return input_text;
 }
 
-std::string  check_line(const std::string& tmp_str)
+std::string  check_line(std::string tmp_str1, std::string tmp_str2, std::string tmp_str3)
 {
-    std::string result = "Nobody", result_player1, result_player2;
-    if (tmp_str == "xxx") {
+    std::string result = "Nobody", result_player1 = "none", result_player2 ="none";
+    
+    if (tmp_str1 == "xxx" || tmp_str2 == "xxx" || tmp_str3 == "xxx") {
         result_player1 = "Petya won line";
-        return result_player1;
     }
-    if (tmp_str == "ooo"){
+    if (tmp_str1 == "ooo" || tmp_str2 == "ooo" || tmp_str3 == "ooo"){
         result_player2 = "Vanya won line";
-        return result_player2;
     }
+
+    if(result_player1 == "Petya won line" && result_player2 == "Vanya won line")     return result;
+    if(result_player1 == "Petya won line" && result_player2 == "none")       return result_player1;
+    if(result_player1 == "none" && result_player2 == "Vanya won line")       return result_player2;
     return result;
 }
 
 std::string  check_vertical(std::string tmp_str1, std::string tmp_str2, std::string tmp_str3)
 {
-    std::string result = "Nobody", result_player1, result_player2;
+    std::string result = "Nobody", result_player1 = "none", result_player2 ="none";
+
     for(int i = 0; i < 3; i++)
     {
         if (tmp_str1[i] == 'x' && tmp_str2[i] == 'x' && tmp_str3[i]== 'x')
         {
             result_player1 = "Petya won vert";
-            return result_player1;
         }
         if (tmp_str1[i] == 'o' && tmp_str2[i] == 'o' && tmp_str3[i]== 'o')
         {
             result_player2 = "Vanya won vert";
-            return result_player2;
         }
     }
+
+    if(result_player1 == "Petya won vert" && result_player2 == "Vanya won vert")     return result;
+    if(result_player1 == "Petya won vert" && result_player2 == "none")       return result_player1;
+    if(result_player1 == "none" && result_player2 == "Vanya won vert")       return result_player2;
     return result;
 }
+
 
 std::string  check_diagonal(std::string tmp_str1, std::string tmp_str2, std::string tmp_str3)
 {
@@ -84,14 +91,12 @@ std::string  check_diagonal(std::string tmp_str1, std::string tmp_str2, std::str
     return result;
 }
 
-std::string result_check(const std::string& tmp_str1, const std::string& tmp_str2, const std::string& tmp_str3)
+std::string result_check(std::string tmp_str1, std::string tmp_str2, std::string tmp_str3)
 {
     std::string result = "Nobody";
-    if(check_line(tmp_str1) != "Nobody") return check_line(tmp_str1);
-    if(check_line(tmp_str2) != "Nobody") return check_line(tmp_str2);
-    if(check_line(tmp_str3) != "Nobody") return check_line(tmp_str3);
-    if(check_vertical(tmp_str1,tmp_str2, tmp_str3) != "Nobody") return check_vertical(tmp_str1,tmp_str2, tmp_str3);
-    if(check_diagonal(tmp_str1,tmp_str2, tmp_str3) != "Nobody") return check_diagonal(tmp_str1,tmp_str2, tmp_str3);
+    if(check_line(tmp_str1, tmp_str2, tmp_str3) != "Nobody") return check_line(tmp_str1, tmp_str2, tmp_str3);
+    if(check_vertical(tmp_str1, tmp_str2, tmp_str3) != "Nobody") return check_vertical(tmp_str1, tmp_str2, tmp_str3);
+    if(check_diagonal(tmp_str1, tmp_str2, tmp_str3) != "Nobody") return check_diagonal(tmp_str1, tmp_str2, tmp_str3);
     return result;
 }
 
