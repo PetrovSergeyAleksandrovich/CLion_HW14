@@ -28,15 +28,15 @@ std::string  check_line(std::string tmp_str1, std::string tmp_str2, std::string 
     std::string result = "Nobody", result_player1 = "none", result_player2 ="none";
 
     if (tmp_str1 == "xxx" || tmp_str2 == "xxx" || tmp_str3 == "xxx") {
-        result_player1 = "Petya won line";
+        result_player1 = "Petya";
     }
     if (tmp_str1 == "ooo" || tmp_str2 == "ooo" || tmp_str3 == "ooo"){
-        result_player2 = "Vanya won line";
+        result_player2 = "Vanya";
     }
 
-    if(result_player1 == "Petya won line" && result_player2 == "Vanya won line")     return result;
-    if(result_player1 == "Petya won line" && result_player2 == "none")       return result_player1;
-    if(result_player1 == "none" && result_player2 == "Vanya won line")       return result_player2;
+    if(result_player1 == "Petya" && result_player2 == "Vanya")     return result;
+    if(result_player1 == "Petya" && result_player2 == "none")       return result_player1;
+    if(result_player1 == "none" && result_player2 == "Vanya")       return result_player2;
     return result;
 }
 
@@ -48,17 +48,17 @@ std::string  check_vertical(std::string tmp_str1, std::string tmp_str2, std::str
     {
         if (tmp_str1[i] == 'x' && tmp_str2[i] == 'x' && tmp_str3[i]== 'x')
         {
-            result_player1 = "Petya won vert";
+            result_player1 = "Petya";
         }
         if (tmp_str1[i] == 'o' && tmp_str2[i] == 'o' && tmp_str3[i]== 'o')
         {
-            result_player2 = "Vanya won vert";
+            result_player2 = "Vanya";
         }
     }
 
-    if(result_player1 == "Petya won vert" && result_player2 == "Vanya won vert")     return result;
-    if(result_player1 == "Petya won vert" && result_player2 == "none")       return result_player1;
-    if(result_player1 == "none" && result_player2 == "Vanya won vert")       return result_player2;
+    if(result_player1 == "Petya" && result_player2 == "Vanya")     return result;
+    if(result_player1 == "Petya" && result_player2 == "none")       return result_player1;
+    if(result_player1 == "none" && result_player2 == "Vanya")       return result_player2;
     return result;
 }
 
@@ -69,37 +69,67 @@ std::string  check_diagonal(std::string tmp_str1, std::string tmp_str2, std::str
 
     if (tmp_str1[0] == 'x' && tmp_str2[1] == 'x' && tmp_str3[2]== 'x')
     {
-        result_player1 = "Petya won diag";
+        result_player1 = "Petya";
         return result_player1;
     }
     if (tmp_str1[2] == 'x' && tmp_str2[1] == 'x' && tmp_str3[0]== 'x')
     {
-        result_player2 = "Petya won diag";
+        result_player2 = "Petya";
         return result_player2;
     }
 
     if (tmp_str1[0] == 'o' && tmp_str2[1] == 'o' && tmp_str3[2]== 'o')
     {
-        result_player1 = "Vanya won diag";
+        result_player1 = "Vanya";
         return result_player1;
     }
     if (tmp_str1[2] == 'o' && tmp_str2[1] == 'o' && tmp_str3[0]== 'o')
     {
-        result_player2 = "Vanya won diag";
+        result_player2 = "Vanya";
         return result_player2;
     }
+    return result;
+}
+
+std::string check_game(std::string tmp_str1, std::string tmp_str2, std::string tmp_str3, std::string game_status)
+{
+    std::string result = "Nobody";
+    int x = 0, o = 0;
+
+    for(int i = 0; i < 3; i++)
+    {
+        if(tmp_str1[i] == 'x') x++;
+        if(tmp_str1[i] == 'o') o++;
+    }
+    for(int i = 0; i < 3; i++)
+    {
+        if(tmp_str2[i] == 'x') x++;
+        if(tmp_str2[i] == 'o') o++;
+    }
+    for(int i = 0; i < 3; i++)
+    {
+        if(tmp_str3[i] == 'x') x++;
+        if(tmp_str3[i] == 'o') o++;
+    }
+
+    if(game_status == "Petya" && (x - o == 1) ) return game_status;
+    if(game_status == "Vanya" && (x - o == 0) ) return game_status;
+
     return result;
 }
 
 std::string result_check(std::string tmp_str1, std::string tmp_str2, std::string tmp_str3)
 {
     std::string result = "Nobody";
-    if(check_line(tmp_str1, tmp_str2, tmp_str3) != "Nobody") return check_line(tmp_str1, tmp_str2, tmp_str3);
-    if(check_vertical(tmp_str1, tmp_str2, tmp_str3) != "Nobody") return check_vertical(tmp_str1, tmp_str2, tmp_str3);
-    if(check_diagonal(tmp_str1, tmp_str2, tmp_str3) != "Nobody") return check_diagonal(tmp_str1, tmp_str2, tmp_str3);
-    return result;
-}
+    if(check_line(tmp_str1, tmp_str2, tmp_str3) != "Nobody") result = check_line(tmp_str1, tmp_str2, tmp_str3);
+    if(check_vertical(tmp_str1, tmp_str2, tmp_str3) != "Nobody") result = check_vertical(tmp_str1, tmp_str2, tmp_str3);
+    if(check_diagonal(tmp_str1, tmp_str2, tmp_str3) != "Nobody") result = check_diagonal(tmp_str1, tmp_str2, tmp_str3);
 
+    if(result == "Vanya" || result == "Petya") result = check_game(tmp_str1, tmp_str2, tmp_str3, result);
+
+    return result;
+
+}
 
 int main()
 {

@@ -77,13 +77,13 @@ std::string conversion(std::string x)
 std::string comparison(std::string x, std::string y)
 {
     std::string result = "Equal";
+
     //check if equal
     if(x == y) return result;
 
+    //check for any zeros
     bool IsX = false;
     bool IsY = false;
-
-    //check for any zeros
     for(int i = 1; x[i] != '\0'; i++)
     {
         if(x[i] == '.') continue;
