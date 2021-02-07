@@ -43,6 +43,8 @@ std::string conversion(std::string x)
     if(x[0] == '-') tmp.push_back('0');
     else tmp.push_back('1');
 
+
+
     for(int i = 0; x[i] != '\0';)
     {
         if(x[i] == '0' || x[i] == '-')
@@ -75,14 +77,33 @@ std::string conversion(std::string x)
 std::string comparison(std::string x, std::string y)
 {
     std::string result = "Equal";
+    //check if equal
+    if(x == y) return result;
 
+    bool IsX = false;
+    bool IsY = false;
+
+    //check for any zeros
+    for(int i = 1; x[i] != '\0'; i++)
+    {
+        if(x[i] == '.') continue;
+        if(x[i] != '0') IsX = true;
+    }
+    for(int i = 1; y[i] != '\0'; i++)
+    {
+        if(y[i] == '.') continue;
+        if(y[i] != '0') IsY = true;
+    }
+    if(!IsX && !IsY) return result;
+
+    //check sign
     if(x[0] > y[0]) { result = "More"; return result;}
     if(x[0] < y[0]) { result = "Less"; return result;}
 
+    //check if both positive
     if(x[0] == '1'){
         for(int i = 1; ; i++)
         {
-
             if(x[i] == y[i]) continue;
 
             if(x[i] > y[i]) { result = "More"; return result;}
@@ -93,10 +114,10 @@ std::string comparison(std::string x, std::string y)
         }
     }
 
+    //check if both negative
     if(x[0] == '0'){
         for(int i = 1; ; i++)
         {
-
             if(x[i] == y[i]) continue;
 
             if(x[i] < y[i]) { result = "More"; return result;}
@@ -106,9 +127,6 @@ std::string comparison(std::string x, std::string y)
             if(x[i] == '\0' && y[i] >= '0' && y[i] <= '9') { result = "More"; return result;}
         }
     }
-
-
-    return result;
 }
 
 
@@ -118,9 +136,6 @@ int main()
     std::string y = input();
     x = conversion(x);
     y = conversion(y);
-
-    std::cout << "x (first symbol is sign): " << x << std::endl;
-    std::cout << "y (first symbol is sign): " << y << std::endl;
 
     std::cout << comparison(x, y);
 
