@@ -36,15 +36,93 @@ std::string input()
     return output;
 }
 
+std::string conversion(std::string x)
+{
+    std::string tmp;
+
+    if(x[0] == '-') tmp.push_back('0');
+    else tmp.push_back('1');
+
+    for(int i = 0; x[i] != '\0';)
+    {
+        if(x[i] == '0' || x[i] == '-')
+        {
+            i++;
+            continue;
+        }
+        else
+        {
+            for(int j = i; x[j] != '.'; j++)
+            {
+                tmp.push_back(x[j]);
+                i++;
+            }
+        }
+
+        if(x[i] == '.')
+        {
+            for(int j = i; x[j] != '\0'; j++)
+            {
+                tmp.push_back(x[j]);
+                i++;
+            }
+        }
+    }
+
+    return tmp;
+}
+
+std::string comparison(std::string x, std::string y)
+{
+    std::string result = "Equal";
+
+    if(x[0] > y[0]) { result = "More"; return result;}
+    if(x[0] < y[0]) { result = "Less"; return result;}
+
+    if(x[0] == '1'){
+        for(int i = 1; ; i++)
+        {
+
+            if(x[i] == y[i]) continue;
+
+            if(x[i] > y[i]) { result = "More"; return result;}
+            if(x[i] < y[i]) { result = "Less"; return result;}
+
+            if(x[i] >= '0' && x[i] <= '9' && y[i] == '\0') { result = "More"; return result;}
+            if(x[i] == '\0' && y[i] >= '0' && y[i] <= '9') { result = "Less"; return result;}
+        }
+    }
+
+    if(x[0] == '0'){
+        for(int i = 1; ; i++)
+        {
+
+            if(x[i] == y[i]) continue;
+
+            if(x[i] < y[i]) { result = "More"; return result;}
+            if(x[i] > y[i]) { result = "Less"; return result;}
+
+            if(x[i] >= '0' && x[i] <= '9' && y[i] == '\0') { result = "Less"; return result;}
+            if(x[i] == '\0' && y[i] >= '0' && y[i] <= '9') { result = "More"; return result;}
+        }
+    }
+
+
+    return result;
+}
+
 
 int main()
 {
     std::string x = input();
     std::string y = input();
+    x = conversion(x);
+    y = conversion(y);
 
-    if( stold(x) + stold(y) == 0) { std::cout << "Equal"; return 0;}
-    if( stold(x) > stold(y) )     { std::cout << "More";  return 0;}
-    if( stold(x) < stold(y) )     { std::cout << "Less";  return 0;}
+    std::cout << "x (first symbol is sign): " << x << std::endl;
+    std::cout << "y (first symbol is sign): " << y << std::endl;
+
+    std::cout << comparison(x, y);
 
     return 0;
 }
