@@ -43,8 +43,6 @@ std::string conversion(std::string x)
     if(x[0] == '-') tmp.push_back('0');
     else tmp.push_back('1');
 
-
-
     for(int i = 0; x[i] != '\0';)
     {
         if(x[i] == '0' || x[i] == '-')
@@ -69,6 +67,12 @@ std::string conversion(std::string x)
                 i++;
             }
         }
+    }
+
+    //remove zeros from end
+    for(int i = tmp.length()-1; tmp[i] == '0'; i--)
+    {
+        tmp.pop_back();
     }
 
     return tmp;
@@ -100,32 +104,22 @@ std::string comparison(std::string x, std::string y)
     if(x[0] > y[0]) { result = "More"; return result;}
     if(x[0] < y[0]) { result = "Less"; return result;}
 
-    //check if both positive
-    if(x[0] == '1'){
-        for(int i = 1; ; i++)
-        {
-            if(x[i] == y[i]) continue;
+    //check if same have same sign '-' or '+'
+    for(int i = 1; ; i++)
+    {
+        if(x[i] == y[i]) continue;
 
-            if(x[i] > y[i]) { result = "More"; return result;}
-            if(x[i] < y[i]) { result = "Less"; return result;}
+        if(x[0] == '1' && x[i] > y[i]) { result = "More"; return result;}
+        else { result = "Less"; return result;}
 
-            if(x[i] >= '0' && x[i] <= '9' && y[i] == '\0') { result = "More"; return result;}
-            if(x[i] == '\0' && y[i] >= '0' && y[i] <= '9') { result = "Less"; return result;}
-        }
-    }
+        if(x[0] == '0' && x[i] < y[i]) { result = "More"; return result;}
+        else { result = "Less"; return result;}
 
-    //check if both negative
-    if(x[0] == '0'){
-        for(int i = 1; ; i++)
-        {
-            if(x[i] == y[i]) continue;
+        if(x[0] == '1' && x[i] >= '0' && x[i] <= '9' && y[i] == '\0') { result = "More"; return result;}
+        else { result = "Less"; return result;}
 
-            if(x[i] < y[i]) { result = "More"; return result;}
-            if(x[i] > y[i]) { result = "Less"; return result;}
-
-            if(x[i] >= '0' && x[i] <= '9' && y[i] == '\0') { result = "Less"; return result;}
-            if(x[i] == '\0' && y[i] >= '0' && y[i] <= '9') { result = "More"; return result;}
-        }
+        if(x[0] == '0' && x[i] >= '0' && x[i] <= '9' && y[i] == '\0') { result = "Less"; return result;}
+        else{ result = "More"; return result;}
     }
 }
 
