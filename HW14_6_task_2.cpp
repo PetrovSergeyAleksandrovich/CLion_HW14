@@ -93,7 +93,7 @@ std::string  check_diagonal(std::string tmp_str1, std::string tmp_str2, std::str
 
 std::string check_game(std::string tmp_str1, std::string tmp_str2, std::string tmp_str3, std::string game_status)
 {
-    std::string result = "Nobody";
+    std::string result = "wrong game combination";
     int x = 0, o = 0;
 
     for(int i = 0; i < 3; i++)
